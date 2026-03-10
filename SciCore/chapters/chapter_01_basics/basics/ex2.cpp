@@ -2,6 +2,7 @@
 
 #include <cstdlib>  // for std::free
 #include <print>    // C++23
+#include <string>
 #include <typeinfo>
 
 // The helper to get the "Pretty Name"
