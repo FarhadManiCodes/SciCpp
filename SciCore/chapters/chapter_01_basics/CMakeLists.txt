@@ -1,0 +1,6 @@
+add_subdirectory(basics)
+add_subdirectory(containers)
+add_subdirectory(graphics)
+add_subdirectory(io_filesystem)
+add_subdirectory(math)
+add_subdirectory(memory)

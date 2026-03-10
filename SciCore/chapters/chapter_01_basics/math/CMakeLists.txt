@@ -1,0 +1,1 @@
+scicore_add_exercises(ch01_math)

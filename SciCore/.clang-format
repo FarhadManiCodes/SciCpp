@@ -1,0 +1,17 @@
+# .clang-format
+BasedOnStyle: Google
+
+# 1. The "Scientific Type" Rule (double* p)
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# 2. Math & Loop Readability
+ColumnLimit: 100
+SpaceInEmptyParentheses: false        # func() not func( )
+SpaceBeforeAssignmentOperators: false
+
+# 3. Modern C++ Features
+Standard: Latest
+
+# 4. Vertical Spacing (Keep functions compact)
+AllowShortFunctionsOnASingleLine: Inline
