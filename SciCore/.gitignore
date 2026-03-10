@@ -32,7 +32,6 @@
 *.out
 *.app
 
-playground
+playground/*.cpp
 .cache/
 Session.vim
-playground/

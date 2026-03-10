@@ -34,7 +34,8 @@ cmake -B build -S . -DDMC2_ENABLE_CPP20=ON
 
 ## Compiler & Standard
 
-- **Standard:** C++23 (`cxx_std_23` via `target_compile_features`), extensions off.
+- **Default standard:** C++23 (`cxx_std_23` via `scicore_compiler_flags` interface target), extensions off.
+- **Per-target override:** Use `target_compile_features(<target> PRIVATE cxx_std_26)` for files that require C++26 features. Mark those files with `// Requires C++26: <feature>` at the top and `// C++26` inline at each usage.
 - **Flags:** `-Wall -Wextra -Wpedantic -march=native` (no `-Werror`).
 - **`compile_commands.json`** exported automatically for clangd.
 - **External dep:** `mdspan` header-only library in `SciCore/external/mdspan/` — included via `scicore_compiler_flags` interface target.

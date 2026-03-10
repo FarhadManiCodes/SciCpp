@@ -2,7 +2,7 @@
 # Globs all .cpp files in the current directory and creates one
 # executable per file, named PREFIX_filename, linked to scicore_compiler_flags.
 macro(scicore_add_exercises PREFIX)
-    file(GLOB SOURCES "*.cpp")
+    file(GLOB SOURCES CONFIGURE_DEPENDS "*.cpp")
     foreach(src ${SOURCES})
         get_filename_component(name ${src} NAME_WE)
         add_executable(${PREFIX}_${name} ${src})

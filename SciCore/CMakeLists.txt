@@ -3,7 +3,7 @@ project(SciCore LANGUAGES CXX)
 
 # 1. Shared compiler rules (the "backpack")
 add_library(scicore_compiler_flags INTERFACE)
-target_compile_features(scicore_compiler_flags INTERFACE cxx_std_26)
+target_compile_features(scicore_compiler_flags INTERFACE cxx_std_23)
 target_compile_options(scicore_compiler_flags INTERFACE
     $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:GNU>>:
         -Wall -Wextra -Wpedantic -march=native
@@ -26,4 +26,4 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_subdirectory(src)
 add_subdirectory(chapters/chapter_01_basics)
 add_subdirectory(playground)
-# add_subdirectory(chapters/chapter_02_classes)   # uncomment as you progress
+add_subdirectory(chapters/chapter_02_classes)
