@@ -1,4 +1,5 @@
 add_subdirectory(basics)
+add_subdirectory(benchmarks)
 add_subdirectory(containers)
 add_subdirectory(graphics)
 add_subdirectory(io_filesystem)
