@@ -11,7 +11,7 @@ class Vec3 {
   Vec3(double x_in, double y_in, double z_in) : x(x_in), y(y_in), z(z_in) {}
 
   // Constructor 2: Explicitly uses the defaults defined above
-  // Vec3()= default;
+  Vec3()= default;
 
   void print() const { std::println("({}, {}, {})", x, y, z); }
 };
