@@ -1,1 +1,10 @@
 scicore_add_exercises(ch01_basics)
+
+find_package(spdlog REQUIRED)
+file(GLOB _srcs CONFIGURE_DEPENDS "*.cpp")
+foreach(_src ${_srcs})
+    get_filename_component(_name ${_src} NAME_WE)
+    if(_name MATCHES "spdlog")
+        target_link_libraries(ch01_basics_${_name} PRIVATE spdlog::spdlog)
+    endif()
+endforeach()
